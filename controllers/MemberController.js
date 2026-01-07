@@ -5,7 +5,7 @@ const Member = require('../models/Member'); //Importing Member Model
 //Function for Creation of Member
 const createMember = async (req, res) => {
     try {
-        const { firstName, middleName, lastName, email, civilStatus, userId} = req.body;
+        const {firstName, middleName, lastName, email, civilStatus,userId} = req.body;
         const memberData = { firstName, middleName, lastName, email, civilStatus}
         if (userId) {
             memberData.user = userId;

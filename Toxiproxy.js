@@ -37,4 +37,4 @@ async function setupProxy() {
     }
 }
 
-setupProxy();
+module.exports = { setupProxy };
