@@ -2,7 +2,7 @@
   "name": "toxiproxy-mongodb-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
