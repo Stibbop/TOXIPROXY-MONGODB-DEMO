@@ -14,6 +14,10 @@ app.get('/', (req, res) => {
 app.get('/api', (req, res) => {
     res.json({ message: 'Cebu Pacific 2026!' });
 });
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
 
 
 //Connection to MongoDB if not in test mode
