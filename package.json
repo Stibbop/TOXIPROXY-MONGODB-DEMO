@@ -8,9 +8,6 @@
     "test:watch": "jest --watchAll",
     "start": "node server.js"
   },
-  "engines": {
-    "node": ">=18.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Stibbop/TOXIPROXY-MONGODB-DEMO.git"
