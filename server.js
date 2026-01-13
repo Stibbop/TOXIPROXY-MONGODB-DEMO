@@ -10,6 +10,11 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.json({ message: 'Hello World!' });
 });
+// Cebu Pacific endpoint
+app.get('/api', (req, res) => {
+    res.json({ message: 'Cebu Pacific 2026!' });
+});
+
 
 //Connection to MongoDB if not in test mode
 if (process.env.NODE_ENV !== 'test'){
