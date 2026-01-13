@@ -1,3 +1,5 @@
+const { get } = require("mongoose");
+
 const Member = require('../models/Member'); //Importing Member Model
 
 //Function for Creation of Member
