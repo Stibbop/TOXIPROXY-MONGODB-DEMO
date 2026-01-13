@@ -6,6 +6,11 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 
+// Hello World endpoint
+app.get('/', (req, res) => {
+    res.json({ message: 'Hello World!' });
+});
+
 //Connection to MongoDB if not in test mode
 if (process.env.NODE_ENV !== 'test'){
     mongoose.connect(process.env.MONGO_URI)

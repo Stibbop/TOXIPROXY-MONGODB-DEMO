@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1767691780629" clover="3.2.0">
-  <project timestamp="1767691780629" name="All files">
+<coverage generated="1767762593473" clover="3.2.0">
+  <project timestamp="1767762593473" name="All files">
     <metrics statements="68" coveredstatements="68" conditionals="14" coveredconditionals="14" methods="6" coveredmethods="6" elements="88" coveredelements="88" complexity="0" loc="68" ncloc="68" packages="4" files="4" classes="4"/>
     <package name="TOXIPROXY-MONGODB-DEMO">
       <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
