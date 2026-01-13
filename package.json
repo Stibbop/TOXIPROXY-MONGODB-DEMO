@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --coverage",
     "test:watch": "jest --watchAll",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "echo 'No build step required' && exit 0"
   },
   "engines": {
     "node": ">=18.0.0"

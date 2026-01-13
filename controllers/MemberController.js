@@ -1,5 +1,3 @@
-const { get } = require("mongoose");
-
 const Member = require('../models/Member'); //Importing Member Model
 
 //Function for Creation of Member
@@ -48,6 +46,9 @@ const updateMember = async (req, res) => {
         const { firstName, middleName, lastName, email, civilStatus, userId} = req.body;
         const updateData = {};
         if (firstName) updateData.firstName = firstName;
+        if (middleName) updateData.middleName = middleName;
+        if (lastName) updateData.lastName = lastName;
+        if (civilStatus) updateData.civilStatus = civilStatus;
         if (email) updateData.email = email;
         if (userId) updateData.user = userId;
         const updatedMember = await Member.findByIdAndUpdate(
