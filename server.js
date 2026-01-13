@@ -23,16 +23,20 @@ app.get('/health', (req, res) => {
 const memberRoutes = require('./routes/MemberRoutes')
 app.use('/members', memberRoutes);
 
-//Connection to MongoDB if not in test mode
-if (process.env.NODE_ENV !== 'test'){
-    mongoose.connect(process.env.MONGO_URI)
-        .then(() => console.log('MongoDB connected'))
-        .catch(err => console.error('MongDB connection error:', err));
+// MongoDB connection
+const PORT = process.env.PORT || 3000;
+const MONGO_URI = process.env.MONGO_URI;
 
-    app.listen(process.env.PORT || 3000, () => {
-        console.log('Server running on port', process.env.PORT || 3000);
-    });
+if (!MONGO_URI) {
+  console.error("MONGO_URI is not defined! Please set it in Vercel Environment Variables.");
+  process.exit(1);
 }
 
-// EXPORT app for jest
+mongoose.connect(MONGO_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.error('MongoDB connection error:', err));
+
+// Start server
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 module.exports = app;
